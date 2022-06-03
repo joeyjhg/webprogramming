@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+	<title>넥슨 소개</title>
+
+	<script>// 미리 로딩해둘 이미지 이름 배열
+	var files = ["media/maple_1.jpg","media/maple_2.jpg","media/maple_3.jpg"];
+	var imgs = new Array();
+	for(var i=0; i<files.length; i++) {
+    	imgs[i] = new Image(); // 이미지 객체 생성
+    	imgs[i].src = files[i]; // 이미지 미리 로딩
+	}
+
+	var files2 = ["media/dungeon_1.jpg","media/dungeon_2.jpg","media/dungeon_3.jpg"];
+	var imgs2 = new Array();
+	for(var i=0; i<files.length; i++) {
+    	imgs2[i] = new Image(); // 이미지 객체 생성
+    	imgs2[i].src = files2[i]; // 이미지 미리 로딩
+	}
+ 
+// 다음 이미지 출력
+	var next = 1;
+	function change(img) {
+   	 	img.src = imgs[next].src; // 이미지 변경
+    	next++; // 다음 이미지 인덱스
+    	next %= imgs.length; // 개수를 넘으면 처음으로
+	}
+	function change2() {
+    img=document.getElementById("img");
+    img.src = imgs2[next].src; // 이미지 변경
+    next++; // 다음 이미지 인덱스
+    next %= imgs2.length; // 개수를 넘으면 처음으로
+}
+
+	function load() {
+		var select = document.getElementById("site");
+		var win=window.open();
+		win.location=select.options[select.selectedIndex].value;
+	}
+</script>
+</head>
+<body>
+
+	<header>
+		<h1>넥슨</h1>
+		<p>
+			대한민국의 게임 제작 · 배급사. 대한민국의 3대 게임사 중 하나이다. 본사는 일본에 위치해 있다.
+            <br><br>
+		</p>
+		
+	</header>
+
+	<nav style="">
+		<h2>목차</h2>
+		<ul>
+			<li><a href="#introduce">소개</a>
+			<li><a href="#history">역사</a>
+			<li><a href="#game">대표 게임들</a>
+		</ul>
+	</nav>
+
+
+	<section>
+		<article>
+			<h2 id="introduce">
+            	소개</h2>
+			<p>
+                <canvas id="myCanvas"
+                		style="background-color:aliceblue"
+                		width="300" height="250"></canvas>
+                <script>
+                	var canvas=document.getElementById("myCanvas");
+                	var context=canvas.getContext("2d");
+
+                	var img=new Image();
+                	img.onload=function(){
+                		context.drawImage(img,0,0,canvas.width,canvas.height);
+                	}
+                	img.src="media/nexon.jpg";
+                </script>
+                <br>
+                넥슨,즉 NEXON은 <span>NEX</span>t generation <span>ON</span>line service의 약자이며 대한민국의 게임 제작·배급사·매출액과 순이익 면에서 명실상부한 <span>국내 게임 업계 1위</span> 기업이다. 또한 세계 최초의 온라인 게임 서비스 기업 타이틀을 보유하고 있기도 하다. 2009년 이후로 국내 업계 1위 자리를 지키고있다. <b><a href="http://www.tgdaily.co.kr/news/articleView.html?idxno=317210">[1위 기사 하이퍼링크]</a></b>김정주와 송재경이 대학교에서의 인연으로 창업한 것이 시작이며, 대표작으로는 메이플스토리, 던전 앤 파이터,  피파 온라인 4, 마비노기, 서든어택, 카트라이더 등이 있다. 
+			</p>
+		</article>
+		<article>
+			<h2 id="history">
+            	역사</h2>
+			<p>	
+			넥슨은 1994년 설립후 현재까지 수많은 일들을 해왔으며, 대표적으로 1996년 넥슨의 첫 작품이자 온라인 게임의 효시인 '바람의나라'를 시작으로, 업계 최초로 부분유료화(Free to Play)라는 비즈니스 모델을 게임시장에 선보이며 새로운 가능성을 제시하였다. 자세한 내용은 밑의 목록에서 확인할수 있다.
+
+			  <br>			 
+				<select id="site">
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2021.aspx" selected>2021					 
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2020.aspx">2020
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2019.aspx" >2019
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2018.aspx" >2018
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2017.aspx" >2017
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2016.aspx" >2016
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2015.aspx" >2015
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2014.aspx" >2014
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2013.aspx" >2013
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2012.aspx" >2012
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2011.aspx" >2011
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2010.aspx" >2010
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2009.aspx" >2009
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2008.aspx" >2008
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2007.aspx" >2007
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2006.aspx" >2006
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2005.aspx" >2005
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2004.aspx" >2004
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2003.aspx" >2003
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2002.aspx" >2002
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2001.aspx" >2001
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_2000.aspx" >2000
+					 <option value="http://company.nexon.com/Company/Introduce/History/History_1990s.aspx" >1994~1999	 	
+				</select>
+				<button onclick="load()">년도별 상세목록</button> <br>
+                '바람의 나라' 이외에도 '메이플 스토리', '던전 앤 파이터', '서든어택'등 다양한 게임들을 서비스 하였는데, 이를 알아보도록 하자.
+			</p>
+		</article>
+		<article>
+			<h2 id="game">
+            	대표 게임들</h2>
+            <b><a href="https://maplestory.nexon.com/Home/Main">
+            	1.메이플 스토리
+            </a></b>
+			<p>
+				
+			<img style="border:20px ridge wheat"
+    			src="media/maple_1.jpg" alt="."
+    			width="200" height="200"
+    			onclick="change(this)"><b>이미지 클릭시 사진 전환</b><br>
+    		위젯 스튜디오에서 제작, 넥슨이 유통하는 온라인 게임으로, 장르는 MMORPG이다. 
+    		<br>2002년 12월과 2003년 1월에 2차에 걸쳐 진행된 CBT를 거쳐, 2003년 4월 29일부터 상용 서비스를 시작했으며, 2022년 현재 19주년을 맞았다. 세계 최초의 횡스크롤 MMORPG를 표방하고 있으며, 다채로운 필드에서의 여행과 모험을 강조하고 있다. 캐치 프레이즈는 '끊임없는 즐거움, 스스로 만들어 나가는 이야기, 상상 속의 세계'이다. MapleStory의 &lt;MAPLE&gt;은 은월을 제외한 5명의 영웅들(Mercedes, Aran, Phantom, Luminous, Evan)의 이니셜을, &lt;STORY&gt;는 5명의 모험가들(Sugar, Tess, Olivia, Rondo, You)의 이니셜을 따서 만들어진 것이다.<br>
+    		장점으로는 첫번 째, 다양한 세계관이 있다. 메이플 스토리의 메인 대륙인 빅토리아 아일랜드만 봐도 요정이 사는 울창한 숲, 아메리카 원주민을 떠올리는 전사들이 사는 황량한 고원지대, 버섯이 즐비한 동산 속 남유럽 전원풍경의 마을, 현대 슬럼가, 그리스 산토리니 풍 해변가, 해적들과 바다 생물이 사는 섬, 동남아 풍, 그 중에도 미얀마나 캄보디아를 떠오르게 하는 유적이 곁들여진 어둡고 고요한 숲, 그리고 깊고 넓은 동굴과 그 끝에 있는 음침한 그리스 양식 신전, 오세아니아의 섬을 떠오르게 하는 플로리나 비치까지 있다. 두번 째로 퀄리티 높은 BGM이 있다. 메이플스토리 BGM은 게임을 플레이해보지 않은 사람도 알고 있을 정도로 질이 좋다. 더구나 오래 들어도 쉽게 질리지 않고, 맵과 상황의 분위기를 더욱 살려준다. 블랙 헤븐 파이널 챕터에 등장하는 스우 3 페이즈 테마인 'Gravity Lord Rise'는 그 중에서도 수준이 매우 다르다. 이때 많은 유저에게 영향을 끼쳤으며 나중에 나올 보스 몬스터 BGM을 기대하는 사람도 늘어났다. 사실상 메이플이 지금까지 인기게임으로 남을 수 있게 하는 데 BGM 역시 큰 공을 세웠다고 볼 수 있다.<br>
+    		<audio src="media/Gravity Lord Rise.mp3" controls>이 브라우저가 지원하지 않습니다.</audio><b>Gravity Lord Rise</b><br>
+    		단점으로는 첫번 째, 과금 요소가 있다. 메이플스토리의 과금 문제는 넥슨 게임들 중에서 단연컨데 원탑으로 스펙업, 코디, 게임 전반적인 컨텐츠의 거의 대부분이 랜덤박스성 가챠뽑기에 의존하고 있다. 그리고 대부분은 특정 횟수 이용시 확정적인 선택권을 주는 천장 시스템도 없다. 두번 째로 운영 문제가 있다. 유저들의 게임 플레이에 방해가 되는 오류는 아무리 문의를 넣어도 수 개월, 길게는 수 년 동안 방치하다가 겨우 고쳐주는 반면 유저들에게 이득이 가는 오류는 발견 즉시 고쳐버리는 행위가 만연하다.<br><br></p>
+    		<b><a href="https://df.nexon.com/df/home">
+            	2.던전 앤 파이터
+            </a></b>
+            	<table>
+						<tr>
+							<td><img style="border:20px ridge wheat"
+    								src="media/dungeon_1.jpg" alt="." id="img"
+    								width="200" height="200"
+    								><button onclick="change2()">버튼 클릭시 사진 전환</button></td>
+						</tr>
+				</table>
+			<p>
+				네오플이 제작하고 넥슨에서 서비스하며 윤명진이 총괄 디렉터를 맡고 있는 벨트스크롤 액션 게임이다.<br>
+				'빠른 플레이'라는 문구에 딱 들어맞는 게임으로, 별다른 생각없이 가볍게 한판 놀 수 있는 오락실 아케이드 게임의 온라인 버전이다. 복잡하게 생각할 것 없이 무작정 던전으로 쳐들어가서 몬스터를 차고, 쏘고, 잡고, 꺾는다는 벨트스크롤 액션 게임 기반 특유의 플레이 방식 덕분에, 간단하게 시간 죽일 수 있는 물건이 그다지 많지 않은 한국 온라인 게임 풍토 속에서 저연령층에서 청장년층까지 폭넓은 유저층을 끌어모으는 인기 게임으로 등극할 수 있었다.<br>
+				장점으로는 화려한 타격감이 있다. 2000년대, 디아블로와 리니지의 흥행 이후 등장한 대부분의 국내 MMORPG들은 적을 마우스 플레이만으로 처리하는 디아블로 스타일의 클릭 앤 플레이 액션을 도입하였다. 이러한 류의 게임들은 화려한 스킬 이펙트와 그래픽 모션 등으로 눈을 즐겁게 하긴 했지만, 대신 멍하게 마우스 버튼만 딸깍딸깍거리다 한 번씩 키보드의 특정 키만 한두 번 눌러주는 식의 무료한 플레이가 되곤 했다. 이럴 때 나타난 던파는 '액션 쾌감'이란 게임 모토에 맞추어 에어리얼, 콤보레이트 등을 통해 당시로선 극한의 손맛을 유저들에게 제공하였다. 단점으로는 심각한 운 의존도가 있다. 확률적 요소는 현재 한국의 거의 모든 게임은 물론 국적을 불문하고 게임 산업을 위해서 거쳐가야 하는 필수적인 관문이 됐으나, 유난히 던파에서 이 확률적 요소가 심각한 문제점으로 작용하고 있는 이유는 스펙업을 하기 위해 필수적으로 거쳐야 하는 거의 모든 관문에서 노가다뿐만 아니라 확률과 운이 개입되며, 콘텐츠 소모를 늦추기 위한 방법을 전적으로 확률에만 의존하고 있기 때문이다.</p><br><br>
+
+				<b><a href="https://sa.nexon.com/main/index.aspx">
+            	3.서든 어택
+            </a></b><br>
+            <img src="media/sudden.jpg" alt="."
+    			width="200" height="200">
+            <p>
+            	<br>
+                (구)게임하이인 넥슨게임즈 에서 제작하고 넥슨에서 배급 하는 온라인 FPS 게임. 게임 제목 자체는 '기습공격'이라는 뜻이며 이 게임 때문에 국내에서는 '서든'이라는 단어 자체가 이 게임을 명칭하는 용어나 다름없게 되었다.<br>
+                2005년 8월 23일에 서비스를 시작하였으며, 게임모드는 목표를 기준으로 데스매치와 점령미션, 폭파미션, 탈취미션, 터치다운, 인질구출, 헤드헌트, 술래잡기 등이 있으며, 사용가능한 무기를 기준으로 칼전, 권총전, 샷건전 등이 있다.
+            </p>				
+		</article>
+		
+	
+	</section>
+
+	<footer>
+		<p><a href="sub.html" target="_blank"> 설문조사</a></p>
+		<p>201801820 웹프로그래밍 01분반 정호균</p>
+	</footer>
+</body>
+</html>
